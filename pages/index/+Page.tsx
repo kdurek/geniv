@@ -1,17 +1,9 @@
-import React from "react";
-import { Counter } from "./Counter.js";
+import { Compose } from "@/components/compose/compose";
 
 export default function Page() {
   return (
-    <>
-      <h1 className="font-bold text-3xl pb-4">My Vike app</h1>
-      This page is:
-      <ul>
-        <li>Rendered to HTML.</li>
-        <li>
-          Interactive. <Counter />
-        </li>
-      </ul>
-    </>
+    <div className="flex flex-auto flex-col">
+      <Compose />
+    </div>
   );
 }

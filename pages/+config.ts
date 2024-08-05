@@ -1,7 +1,7 @@
+import Head from "@/layouts/head-default";
+import Layout from "@/layouts/layout-default";
 import vikeReact from "vike-react/config";
 import type { Config } from "vike/types";
-import Head from "../layouts/HeadDefault.js";
-import Layout from "../layouts/LayoutDefault.js";
 
 // Default config (can be overridden by pages)
 export default {
@@ -9,6 +9,8 @@ export default {
   Head,
 
   // <title>
-  title: "My Vike App",
+  title: "Geniv",
   extends: vikeReact,
+
+  ssr: false,
 } satisfies Config;
