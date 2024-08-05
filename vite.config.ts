@@ -3,7 +3,7 @@ import vike from "vike/plugin";
 import { defineConfig } from "vite";
 
 export default defineConfig({
-  plugins: [vike({}), react({})],
+  plugins: [vike({ prerender: true }), react({})],
   base: "/geniv/",
   resolve: {
     alias: {
