@@ -12,7 +12,7 @@ export function Link({ href, children }: { href: string; children: string }) {
       href={href}
       className={cn(
         buttonVariants({ variant: "link" }),
-        isActive && "underline",
+        isActive && "underline"
       )}
     >
       {children}
