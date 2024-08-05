@@ -9,7 +9,7 @@ export function Link({ href, children }: { href: string; children: string }) {
     href === "/" ? urlPathname === href : urlPathname.startsWith(href);
   return (
     <a
-      href={href}
+      href={import.meta.env.BASE_URL + href}
       className={cn(
         buttonVariants({ variant: "link" }),
         isActive && "underline"
