@@ -4,7 +4,7 @@ import { defineConfig } from "vite";
 
 export default defineConfig({
   plugins: [vike({ prerender: true }), react({})],
-  base: "/geniv/",
+  base: "/geniv",
   resolve: {
     alias: {
       "@": __dirname,
