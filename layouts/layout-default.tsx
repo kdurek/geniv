@@ -1,3 +1,4 @@
+import { ProjectConfig } from "@/components/compose/project-config";
 import { Link } from "@/components/link";
 import { ModeToggle } from "@/components/mode-toggle";
 import { ThemeProvider } from "@/components/theme-provider";
@@ -7,27 +8,22 @@ import type { ReactNode } from "react";
 export default function LayoutDefault({ children }: { children: ReactNode }) {
   return (
     <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
-      <div className="relative flex min-h-screen flex-col">
-        <Navbar>
-          <Link href="/">Home</Link>
-          <div className="ml-auto">
-            <ModeToggle />
-          </div>
-        </Navbar>
-        <Content>{children}</Content>
+      <div className="relative min-h-screen overflow-hidden">
+        <Navbar />
+        {children}
       </div>
     </ThemeProvider>
   );
 }
 
-function Navbar({ children }: { children: ReactNode }) {
+function Navbar() {
   return (
-    <div className="sticky top-0 z-50 flex border-b bg-background p-4">
-      {children}
+    <div className="z-50 flex h-16 items-center border-b bg-background px-4">
+      <Link href="/">Home</Link>
+      <div className="ml-auto flex gap-2">
+        <ProjectConfig />
+        <ModeToggle />
+      </div>
     </div>
   );
-}
-
-function Content({ children }: { children: ReactNode }) {
-  return <div className="flex-1 p-4">{children}</div>;
 }
