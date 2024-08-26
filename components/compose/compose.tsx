@@ -15,7 +15,7 @@ export function Compose() {
   return (
     <div className="flex h-[calc(100dvh-64px)]">
       <div className="flex flex-auto flex-col gap-4 py-4 pl-4">
-        <CodeEditor value={value} onChange={setValue} />
+        <CodeEditor value={value} onChange={setValue} copy />
       </div>
       {errorValue ? (
         <div className="w-96 p-4">
